@@ -26,7 +26,12 @@ def process(root, name):
     return result
 
 if __name__ == '__main__':
-    for root, dirs, files in os.walk('./'):
+    import sys
+    try:
+        ruta = sys.argv[1]
+    except:
+        ruta = './'
+    for root, dirs, files in os.walk(ruta):
         for name in files:
             if 'kmz' in name:
                 result = process(root, name)
