@@ -22,7 +22,7 @@ def rec_read(filename):
     coche = compania.Folder[0]
     coche_nombre = coche.name
 
-    puntos = recuperar_corrido(coche)
+    puntos = recuperar_recorrido(coche)
 
     resultado = {
         'compania': compania_nombre,
